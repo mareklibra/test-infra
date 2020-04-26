@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 source create_full_environment.sh
+source scripts/assisted_deployment.sh
 
 echo "Starting cluster"
-/usr/local/bin/skipper make run_full_flow_with_install
+run "run_full_flow_with_install"
+wait_for_cluster

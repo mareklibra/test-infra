@@ -1,10 +1,10 @@
 BMI_BRANCH ?= master
 IMAGE ?= ""
-NUM_MASTERS ?= 3
+NUM_MASTERS :=  $(or $(NUM_MASTERS),0)
 WORKER_MEMORY ?= 8892
 MASTER_MEMORY ?= 16984
 NUM_WORKERS := $(or $(NUM_WORKERS),0)
-STORAGE_POOL_PATH ?= $(PWD)/storage_pool
+STORAGE_POOL_PATH := $(or $(STORAGE_POOL_PATH), $(PWD)/storage_pool)
 SSH_PUB_KEY := $(or $(SSH_PUB_KEY),$(shell cat ssh_key/key.pub))
 PULL_SECRET :=  $(or $(PULL_SECRET),)
 SHELL=/bin/sh
