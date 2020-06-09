@@ -114,6 +114,9 @@ set_dns:
 deploy_ui: start_minikube
 	scripts/deploy_ui.sh
 
+redeploy_ui:
+	ACTION=redeploy scripts/deploy_ui.sh
+
 kill_all_port_forwardings:
 	scripts/utils.sh kill_all_port_forwardings
 
