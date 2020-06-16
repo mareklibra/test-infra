@@ -10,7 +10,7 @@ export KUBECONFIG=${KUBECONFIG:-$HOME/.kube/config}
 export CONTAINER_COMMAND=${CONTAINER_COMMAND:-podman}
 export UI_DEPLOY_FILE=build/ui_deploy.yaml
 export UI_SERVICE_NAME=ocp-metal-ui
-export UI_IMAGE=quay.io/ocpmetal/ocp-metal-ui:latest
+export UI_IMAGE=${UI_IMAGE:-quay.io/ocpmetal/ocp-metal-ui:latest}
 export NAMESPACE=assisted-installer
 
 if [ ${ACTION} = redeploy ] ; then
